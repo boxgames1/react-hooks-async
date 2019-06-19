@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import ReactPerformance from "react-performance";
 import { getTeams } from "../helpers/ApiConsumer";
-import Team from "./Team";
-import TeamTableHeader from "./TeamTableHeader";
+import TeamsTable from "./TeamsTable";
 
 class TeamsClass extends Component {
   state = {
@@ -22,22 +21,7 @@ class TeamsClass extends Component {
   }
   render() {
     const { error, teams } = this.state;
-    return (
-      <div>
-        {error
-          ? `Error happened loading teams: ${error}`
-          : teams && (
-              <table>
-                <TeamTableHeader />
-                <tbody>
-                  {teams.map(team => (
-                    <Team {...team} key={team.Team} />
-                  ))}
-                </tbody>
-              </table>
-            )}
-      </div>
-    );
+    return <TeamsTable teams={teams} error={error} />;
   }
 }
 
