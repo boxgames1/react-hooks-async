@@ -1,9 +1,9 @@
 import { NFL_CRIME_API_ENDPOINT } from "../constants/Api";
 
-export const getPlayers = () => GETFetch("/player");
+export const getPlayers = () => getFetch("/player");
 
-export const getTeams = () => GETFetch("/team");
+export const getTeams = () => getFetch("/team");
 
-const GETFetch = url => {
+const getFetch = url => {
   return fetch(`${NFL_CRIME_API_ENDPOINT}${url}`);
 };

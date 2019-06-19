@@ -8,10 +8,10 @@ const LinksList = () => (
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/teams/">Teams</Link>
+        <Link to="/teams-class/">Teams with class</Link>
       </li>
       <li>
-        <Link to="/players/">Players</Link>
+        <Link to="/teams-hooks/">Teams with Hooks</Link>
       </li>
     </ul>
   </nav>

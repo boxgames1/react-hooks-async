@@ -8,8 +8,8 @@ const App = () => {
     <Router>
       <div>
         <Route path="/" exact component={LinksList} />
-        <Route path="/teams/" component={Teams} />
-        <Route path="/players/" component={Players} />
+        <Route path="/teams-class/" component={TeamsClass} />
+        <Route path="/teams-hooks/" component={TeamsHooks} />
       </div>
     </Router>
   );
