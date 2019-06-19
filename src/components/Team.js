@@ -1,5 +1,4 @@
 import React from "react";
-import ReactPerformance from "react-performance";
 import PropTypes from "prop-types";
 
 const Team = ({
@@ -35,8 +34,4 @@ Team.propTypes = {
   arrest_count: PropTypes.string.isRequired
 };
 
-export default ReactPerformance.measure({
-  getId: "team_component",
-  Component: Team,
-  isCollapsed: false
-});
+export default Team;

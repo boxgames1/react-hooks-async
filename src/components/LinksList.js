@@ -14,6 +14,7 @@ const LinksList = () => (
         <Link to="/teams-hooks/">Teams with Hooks</Link>
       </li>
     </ul>
+    <hr />
   </nav>
 );
 

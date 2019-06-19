@@ -29,9 +29,11 @@ class TeamsClass extends Component {
           : teams && (
               <table>
                 <TeamTableHeader />
-                {teams.map(team => (
-                  <Team {...team} />
-                ))}
+                <tbody>
+                  {teams.map(team => (
+                    <Team {...team} key={team.Team} />
+                  ))}
+                </tbody>
               </table>
             )}
       </div>
