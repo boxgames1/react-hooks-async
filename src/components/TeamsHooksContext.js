@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { createContext, useEffect, useContext, useState } from "react";
 import ReactPerformance from "react-performance";
 import TeamsTable from "./TeamsTable";
@@ -24,7 +25,7 @@ const TeamsHooksConsumer = () => {
   const [state, setState] = useContext(TeamsContext);
   useEffect(() => {
     fetchTeams(state, setState);
-  }, [setState, state]);
+  }, []);
 
   return <TeamsTable {...state} />;
 };
@@ -40,8 +41,6 @@ const fetchTeams = async (state, setState) => {
     setState({ ...state, loading: true });
     const response = await getTeams();
     const teams = await response.json();
-    console.log(teams);
-
     setState({ ...state, loading: false, teams });
   } catch (error) {
     setState({ ...state, loading: false, error });
