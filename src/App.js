@@ -2,6 +2,8 @@ import React from "react";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import LinksList from "./components/LinksList";
+import TeamsClass from "./components/TeamsClass";
+import TeamsHooks from "./components/TeamsHooks";
 
 const App = () => {
   return (
