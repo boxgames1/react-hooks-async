@@ -6,22 +6,27 @@ import TeamsTable from "./TeamsTable";
 class TeamsClass extends Component {
   state = {
     error: null,
-    teams: null
+    teams: null,
+    loading: false
   };
   async componentDidMount() {
     try {
+      this.setState({
+        loading: true
+      });
       const response = await getTeams();
       const teams = await response.json();
       this.setState({
-        teams
+        teams,
+        loading: false
       });
     } catch (error) {
-      this.setState({ error });
+      this.setState({ error, loading: false });
     }
   }
   render() {
-    const { error, teams } = this.state;
-    return <TeamsTable teams={teams} error={error} />;
+    const { error, teams, loading } = this.state;
+    return <TeamsTable teams={teams} error={error} loading={loading} />;
   }
 }
 

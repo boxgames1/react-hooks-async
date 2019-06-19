@@ -11,7 +11,13 @@ const LinksList = () => (
         <Link to="/teams-class/">Teams with class</Link>
       </li>
       <li>
-        <Link to="/teams-hooks/">Teams with Hooks</Link>
+        <Link to="/teams-hooks/">Teams with useState Hook</Link>
+      </li>
+      <li>
+        <Link to="/teams-hooks-reducer/">Teams with useReducer Hook</Link>
+      </li>
+      <li>
+        <Link to="/teams-hooks-context/">Teams with useContext Hook</Link>
       </li>
     </ul>
     <hr />

@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 import TeamTableHeader from "./TeamTableHeader";
 import Team from "./Team";
 
-const TeamsTable = ({ teams, error }) =>
-  error
+const TeamsTable = ({ teams, error, loading }) =>
+  loading
+    ? "Loading..."
+    : error
     ? `Error happened loading teams: ${error}`
     : teams &&
       teams.length > 0 && (
@@ -20,12 +22,14 @@ const TeamsTable = ({ teams, error }) =>
 
 TeamsTable.propTypes = {
   teams: PropTypes.array,
-  error: PropTypes.string
+  error: PropTypes.string,
+  loading: PropTypes.bool
 };
 
 TeamsTable.defaultPropTypes = {
   teams: null,
-  error: null
+  error: null,
+  loading: false
 };
 
 export default TeamsTable;
